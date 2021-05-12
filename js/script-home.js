@@ -14,22 +14,6 @@ const filmesHome = [
   "tt0988824",
 ];
 
-// puxando as requisições.
-const myCard = document.querySelectorAll(".my-card");
-
-requisicaoFilmes(filmesHome[0], myCard[0]);
-requisicaoFilmes(filmesHome[1], myCard[1]);
-requisicaoFilmes(filmesHome[2], myCard[2]);
-requisicaoFilmes(filmesHome[3], myCard[3]);
-requisicaoFilmes(filmesHome[4], myCard[4]);
-requisicaoFilmes(filmesHome[5], myCard[5]);
-requisicaoFilmes(filmesHome[6], myCard[6]);
-requisicaoFilmes(filmesHome[7], myCard[7]);
-requisicaoFilmes(filmesHome[8], myCard[8]);
-requisicaoFilmes(filmesHome[9], myCard[9]);
-requisicaoFilmes(filmesHome[10], myCard[10]);
-requisicaoFilmes(filmesHome[11], myCard[11]);
-
 //Classes
 class Filme {
   constructor(nome, ano, genero, diretor, poster) {
@@ -39,6 +23,12 @@ class Filme {
     this.diretor = diretor;
     this.poster = poster;
   }
+}
+
+// puxando as requisições.
+const myCard = document.querySelectorAll(".my-card");
+for (let i = 0; i < filmesHome.length; i++) {
+  requisicaoFilmes(filmesHome[i], myCard[i]);
 }
 
 //Requisição AJAX
@@ -107,23 +97,23 @@ $(".my-card").click(function () {
   $(this).next().addClass("next");
 
   // Buscar informações do filme
-  const id = $(this).find('img').data('id');
+  const id = $(this).find("img").data("id");
 
   $.ajax({
     url: `http://omdbapi.com/?i=${id}&apikey=677ae39`,
     success: function (dados) {
       console.log(dados);
-      $('#filmeModal').modal('show');
+      $("#filmeModal").modal("show");
 
-      $('#filmeModalTitulo').html(dados.Title);
-      $('#filmeModalPoster').html(`
+      $("#filmeModalTitulo").html(dados.Title);
+      $("#filmeModalPoster").html(`
         <img class='img' src="${dados.Poster}" alt="foto">
       `);
 
-      const informacoes = $('#filmeModal .informacoes');
-      const titulo = informacoes.find('#titulo');
-      const diretor = informacoes.find('#diretor');
-      const sinopse = informacoes.find('#sinopse');
+      const informacoes = $("#filmeModal .informacoes");
+      const titulo = informacoes.find("#titulo");
+      const diretor = informacoes.find("#diretor");
+      const sinopse = informacoes.find("#sinopse");
 
       titulo.html(`<h1>${dados.Title} (${dados.Year})</h1>`);
       diretor.html(`<span>${dados.Director}</span>`);

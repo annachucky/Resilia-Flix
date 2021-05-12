@@ -27,6 +27,12 @@ body {
 header {
   width: 100%;
 }
+.footer {
+  height: 150px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
 
 .navbar {
   width: 100%;
