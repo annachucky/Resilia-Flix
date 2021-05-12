@@ -225,3 +225,7 @@ img {
   pointer-events: auto;
   transition: 1s;
 }
+
+.filme-modal-body {
+  display: flex;
+}

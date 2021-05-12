@@ -55,7 +55,7 @@ function requisicaoFilmes(id, div) {
       );
 
       $(div).append(`
-                <img class='img' src="${filmeObj.poster}" alt="foto">
+                <img class='img' src="${filmeObj.poster}" alt="foto" data-id="${dados.imdbID}">
           `);
     },
   });
@@ -105,6 +105,31 @@ $(".my-card").click(function () {
   $(this).addClass("active");
   $(this).prev().addClass("prev");
   $(this).next().addClass("next");
+
+  // Buscar informações do filme
+  const id = $(this).find('img').data('id');
+
+  $.ajax({
+    url: `http://omdbapi.com/?i=${id}&apikey=677ae39`,
+    success: function (dados) {
+      console.log(dados);
+      $('#filmeModal').modal('show');
+
+      $('#filmeModalTitulo').html(dados.Title);
+      $('#filmeModalPoster').html(`
+        <img class='img' src="${dados.Poster}" alt="foto">
+      `);
+
+      const informacoes = $('#filmeModal .informacoes');
+      const titulo = informacoes.find('#titulo');
+      const diretor = informacoes.find('#diretor');
+      const sinopse = informacoes.find('#sinopse');
+
+      titulo.html(`<h1>${dados.Title} (${dados.Year})</h1>`);
+      diretor.html(`<span>${dados.Director}</span>`);
+      sinopse.html(`<p>${dados.Plot}</p>`);
+    },
+  });
 });
 
 // Keyboard nav
