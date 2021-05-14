@@ -41,7 +41,7 @@ class Filme {
   }
 }
 
-//Requisição AJAX
+//Requisição AJAX 
 function requisicaoFilmes(id, div) {
   $.ajax({
     url: `http://omdbapi.com/?i=${id}&apikey=677ae39`,
@@ -125,8 +125,8 @@ $(".my-card").click(function () {
       const diretor = informacoes.find('#diretor');
       const sinopse = informacoes.find('#sinopse');
 
-      titulo.html(`<h1>${dados.Title} (${dados.Year})</h1>`);
-      diretor.html(`<span>${dados.Director}</span>`);
+      titulo.html(`<center><h1>${dados.Title} (${dados.Year})</h1></center>`);
+      diretor.html(`<center><span>${dados.Director}</span></center>`);
       sinopse.html(`<p>${dados.Plot}</p>`);
     },
   });

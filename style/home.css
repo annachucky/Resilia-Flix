@@ -228,4 +228,16 @@ img {
 
 .filme-modal-body {
   display: flex;
+  font-family: "Courier New", Courier, monospace;
+}
+
+#filmeModalTitulo {
+  font-family: "Courier New", Courier, monospace;
+  margin: 10px;
+}
+
+.informacoes {
+  margin: 15px;
+  font-size: 15px;
+  font-family: "Courier New", Courier, monospace;
 }
