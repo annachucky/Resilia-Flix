@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='cadastro.css'>
+    <title>Documentos</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <label for='nome'>Nome</label>
+            <input type='text' name='nome'>
+
+            <label for='email'>E-mail</label>
+            <input type='text'  id="email" name='email'>
+            
+            <label for='senha'>Senha </label>
+                <div class='senha'> 
+                    <input type='password' id="password" name='senha'>
+                    <img id="olho" src="https://cdn0.iconfinder.com/data/icons/ui-icons-pack/100/ui-icon-pack-14-512.png"/>
+                </div>  
+
+            <label for='confsenha'>Confirme a senha</label>
+            <div class='senha'> 
+                <input type='password' id="password2" name='confsenha'>
+                <img id="olho2" src="https://cdn0.iconfinder.com/data/icons/ui-icons-pack/100/ui-icon-pack-14-512.png"/>
+            </div>  
+
+            <label for='rg'>RG (apenas números)</label>
+            <input type='number' name='rg'>
+
+            <label for='cep'>CEP (apenas numeros)</label>
+            <input type='number' id='cep' name='cep'>
+
+            <label for='estado'>Estado</label>
+            <input type='text' id='estado' name='estado'>
+            
+            <label for='cidade'>Cidade</label>
+            <input type='text' id='cidade' name='cidade' >
+
+            <label for='bairro'>Bairro</label>
+            <input type='text' id='bairro' name='bairro' >
+
+            <label for='rua'>Rua</label>
+            <input type='text' id='rua' name='rua'>
+
+            <label for='numero'>Número</label>
+            <input type='number' name='numero'>
+
+            <label for='complemento'>Complemento</label>
+            <input type='text' name='complemento'>
+
+            <button type="submit">Enviar</button>
+        </fieldset>
+    </form>
+    <script src='cadastro.js'></script>
+</body>
+</html>
