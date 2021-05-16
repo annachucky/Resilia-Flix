@@ -278,3 +278,7 @@ img {
 #segundo-aparecer {
   animation: aparecer 2.5s;
 }
+#botaocadastro{
+  color: rgb(255, 182, 18);
+  text-decoration: none;
+}
