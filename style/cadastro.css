@@ -1,69 +1,99 @@
-#bodycadastro{
-    color: rgb(255, 182, 18);
+* {
+  margin: 0;
+  padding: 0;
 }
-#formulario{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    width: 100%;
-    margin: 0%;
-    padding: 0%;    
+
+#bodycadastro {
+  color: rgb(255, 182, 18);
+  width: 100%;
 }
-.senha{
-    display: flex;
+#formulario {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+
+  padding: 0%;
 }
-#olho{
-    margin-top: 5px;
-    background-color:  rgb(255, 182, 18);
-    height: 30px;
-    width: 30px;
+
+main {
+  margin-top: 5%;
+  width: 100%;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
 }
-#olho2{
-    margin-top: 5px;
-    background-color:  rgb(255, 182, 18);
-    height: 30px;
-    width: 30px;    
+footer {
+  margin-top: 5rem;
 }
-#container1{
-    border: 2px solid rgb(255, 182, 18); 
-    border-radius: 10px;
-    width: 40%;
-    margin: 1%;
-    height: 450px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    padding: 2%;
-  
+
+.senha {
+  display: flex;
 }
-#container2{
-    border: 2px solid rgb(255, 182, 18); 
-    border-radius: 10px;
-    width: 40%;
-    margin: 1%;
-    height: 450px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    padding: 2%;
+#olho {
+  margin-top: 5px;
+  background-color: rgb(255, 182, 18);
+  height: 30px;
+  width: 30px;
 }
-.error{
-    visibility: hidden;
-    color:red;
-    font-size: 10px;
+#olho2 {
+  margin-top: 5px;
+  background-color: rgb(255, 182, 18);
+  height: 30px;
+  width: 30px;
 }
-#cidade{
-    width: 50%;   
+#container1 {
+  border: 2px solid rgb(255, 182, 18);
+  border-radius: 10px;
+  width: 40%;
+  margin: 1%;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 2%;
 }
-#estado{
-    width: 50%; 
+#container2 {
+  border: 2px solid rgb(255, 182, 18);
+  border-radius: 10px;
+  width: 40%;
+  margin: 1%;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 2%;
 }
-.citystate{
-    display: flex;
+.error {
+  visibility: hidden;
+  color: red;
+  font-size: 10px;
 }
-#numero{
-    width: 50%;   
+#cidade {
+  width: 50%;
 }
-#complemento{
-    width: 50%; 
+#estado {
+  width: 50%;
+}
+.citystate {
+  display: flex;
+}
+#numero {
+  width: 50%;
+}
+#complemento {
+  width: 50%;
+}
+.botao-div {
+  display: flex;
+  justify-content: center;
+  margin-top: 1em;
+}
+@media (min-width: 1441px) {
+  html {
+    height: 100%;
+  }
+  main {
+    height: 100%;
+  }
 }

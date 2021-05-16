@@ -13,7 +13,7 @@ class Filme {
 //Requisições!
 
 //Requisição search
-$(".btn").on("click", () => {
+$(".btn-procura").on("click", () => {
   $(".form-inline").submit(false);
   const url = `http://omdbapi.com/?t=${$(
     ".form-control"
