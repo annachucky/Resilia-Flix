@@ -175,3 +175,4 @@ $(window).scroll(() => {
     $(".apresentacao").removeClass("oculto");
   }, 300);
 });
+
