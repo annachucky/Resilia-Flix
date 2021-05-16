@@ -1,16 +1,69 @@
-body{
+#bodycadastro{
+    color: rgb(255, 182, 18);
+}
+#formulario{
     display: flex;
     justify-content: center;
-}
-fieldset{
-    display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     width: 100%;
+    margin: 0%;
+    padding: 0%;    
 }
 .senha{
     display: flex;
 }
-img{
-    height: 20px;
-    width: 20px;
+#olho{
+    margin-top: 5px;
+    background-color:  rgb(255, 182, 18);
+    height: 30px;
+    width: 30px;
+}
+#olho2{
+    margin-top: 5px;
+    background-color:  rgb(255, 182, 18);
+    height: 30px;
+    width: 30px;    
+}
+#container1{
+    border: 2px solid rgb(255, 182, 18); 
+    border-radius: 10px;
+    width: 40%;
+    margin: 1%;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 2%;
+  
+}
+#container2{
+    border: 2px solid rgb(255, 182, 18); 
+    border-radius: 10px;
+    width: 40%;
+    margin: 1%;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 2%;
+}
+.error{
+    visibility: hidden;
+    color:red;
+    font-size: 10px;
+}
+#cidade{
+    width: 50%;   
+}
+#estado{
+    width: 50%; 
+}
+.citystate{
+    display: flex;
+}
+#numero{
+    width: 50%;   
+}
+#complemento{
+    width: 50%; 
 }

@@ -235,3 +235,7 @@ img {
 .filme-modal-body {
   display: flex;
 }
+#botaocadastro{
+  color: rgb(255, 182, 18);
+  text-decoration: none;
+}
