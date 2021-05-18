@@ -1,15 +1,27 @@
-#recuperasenha{
-    padding: 10px;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-#containerRecupera{
-    border: 2px solid rgb(255, 182, 18); 
-    border-radius: 10px;
-    width: 40%;
-    margin: 1%;
-    height: 200px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    padding: 2%;
+html {
+  height: 100%;
+}
+#recuperasenha {
+  padding: 10px;
+}
+
+#containerRecupera {
+  border: 2px solid rgb(255, 182, 18);
+  border-radius: 10px;
+  width: 40%;
+  margin: 1%;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 2%;
+}
+
+.container {
+  display: flex;
 }
