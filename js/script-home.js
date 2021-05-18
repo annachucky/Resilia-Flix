@@ -75,9 +75,21 @@ for (let i = 0; i < filmesHome.length; i++) {
   $.ajax({
     url: `http://omdbapi.com/?i=${filmesHome[i]}&apikey=677ae39`,
     success: function (dados) {
+      let filmeObj = new Filme(
+        dados.Title,
+        dados.Year,
+        dados.Genre,
+        dados.Director,
+        dados.Poster,
+        dados.Plot
+      );
       $(myCard[i]).append(`
                   <img class='img' src="${dados.Poster}" alt="foto" data-id="${dados.imdbID}">
             `);
+      // Buscar informações do filme
+      $(myCard[i]).dblclick(() => {
+        mostraModal(filmeObj);
+      });
     },
   });
 }
@@ -137,25 +149,6 @@ $(".my-card").click(function () {
   $(this).addClass("active");
   $(this).prev().addClass("prev");
   $(this).next().addClass("next");
-
-  // Buscar informações do filme
-  const id = $(this).find("img").data("id");
-
-  $.ajax({
-    url: `http://omdbapi.com/?i=${id}&apikey=677ae39`,
-    success: function (dados) {
-      let filmeObj = new Filme(
-        dados.Title,
-        dados.Year,
-        dados.Genre,
-        dados.Director,
-        dados.Poster,
-        dados.Plot
-      );
-
-      mostraModal(filmeObj);
-    },
-  });
 });
 
 //Aparição Sobre Resilia Flix

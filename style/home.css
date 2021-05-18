@@ -16,7 +16,7 @@ html body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  font-family: "Quicksand", sans-serif;
+  font-family: "Courier New", Courier, monospace;
   overflow-x: hidden;
   position: relative;
 }
@@ -54,7 +54,7 @@ img {
   height: 500px;
 }
 .fonte {
-  font-family: "Satisfy", cursive;
+  font-family: "Roboto", sans-serif;
   text-shadow: 2px 2px #000000;
 }
 /*Carrosel Banner */
@@ -233,6 +233,14 @@ img {
   transition: 1s;
 }
 /* Carrosel Filmes */
+
+.sobre {
+  font-family: "Roboto", sans-serif;
+}
+.sobre p {
+  font-size: 18px;
+}
+
 /* Modal */
 
 #filme-modalPoster {
