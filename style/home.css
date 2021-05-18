@@ -28,7 +28,7 @@ header {
   width: 100%;
 }
 .footer {
-  height: 150px;
+  height: 122px;
   align-items: center;
   display: flex;
   justify-content: center;
@@ -57,6 +57,7 @@ img {
   font-family: "Satisfy", cursive;
   text-shadow: 2px 2px #000000;
 }
+/*Carrosel Banner */
 
 /* Carrosel Filmes */
 .card-carousel-jquery {
@@ -231,7 +232,53 @@ img {
   pointer-events: auto;
   transition: 1s;
 }
+/* Carrosel Filmes */
 
 .filme-modal-body {
   display: flex;
+  font-family: "Courier New", Courier, monospace;
+}
+
+#filmeModalTitulo {
+  font-family: "Courier New", Courier, monospace;
+  margin: 10px;
+}
+
+.informacoes {
+  margin: 15px;
+  font-size: 15px;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.apresentacao {
+  margin-top: 5rem;
+  width: 50%;
+  padding: 1em;
+  text-align: center;
+}
+.oculto {
+  display: none;
+}
+/*Animação */
+@keyframes aparecer {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#primeiro-aparecer {
+  animation: aparecer 2s;
+  margin-bottom: 0.3em;
+}
+#segundo-aparecer {
+  animation: aparecer 2.5s;
+}
+#botaocadastro{
+  color: rgb(255, 182, 18);
+  text-decoration: none;
 }

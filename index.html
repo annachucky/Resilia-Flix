@@ -16,7 +16,7 @@
       crossorigin="anonymous"
     />
   </head>
-  <body >
+  <body>
     <header>
       <!--Navbar-->
       <nav class="navbar navbar-expand-lg navbar-dark primary-color">
@@ -41,12 +41,13 @@
           <form class="form-inline">
             <div class="md-form my-0">
               <input
+              id="input-procura"
                 class="form-control mr-sm-2"
                 type="text"
                 placeholder="Search"
                 aria-label="Search"
               />
-              <button type="button" class="btn btn-outline-warning">
+              <button id="btn-procura" type="button" class="btn btn-outline-warning btn-procura">
                 Search
               </button>
             </div>
@@ -71,8 +72,8 @@
         <button type="button" class="btn btn-outline-warning mr-3">
           Login
         </button>
-        <button type="button" class="btn btn-outline-warning">
-          Cadastre-se
+        <button type="button" class="btn btn-outline-warning" id="botaocadastro">
+          <a id="botaocadastro" href="cadastro.html">Cadastre-se</a>
         </button>
         <!-- Links -->
       </nav>
@@ -157,7 +158,14 @@
         <div class="my-card"></div>
       </div>
     </section>
-    <footer class="mt-5 w-100 footer">
+    <!--Resilia Flix-->
+    <section class=" sobre apresentacao text-warning oculto">
+    
+     <h1 id="primeiro-aparecer">O futuro...</h1>
+     <p id="segundo-aparecer">O que move o ResíliaFlix é trazer conforto e entretenimento para toda a família disponibilizando filmes e séries para todos os gostos, queremos estar presentes nos momentos de descontração e união na frente da telinha, pois te fazer feliz é o que faz a gente sorrir! Vem fazer parte! #vemProResiliaFlix</p>
+   
+    </section>
+    <footer class="w-100 footer">
       <div class=" text-center p-3 text-warning mt-5 w-100 border-top border-warning" style="background-color: rgba(0, 0, 0, 0.2);">
     © 2021 Copyright:
     <a class="text-white" href="index.html">ResiliaFlix</a>
