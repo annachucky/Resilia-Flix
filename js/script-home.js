@@ -9,7 +9,24 @@ class Filme {
     this.descricao = descricao;
   }
 }
+//funções!
+function mostraModal(obj) {
+  $("#filmeModal").modal("show");
 
+  $("#filmeModalTitulo").html(obj.nome);
+  $("#filmeModalPoster").html(`
+        <img class='img' src="${obj.poster}" alt="foto">
+      `);
+
+  const informacoes = $("#filmeModal .informacoes");
+  const titulo = informacoes.find("#titulo");
+  const diretor = informacoes.find("#diretor");
+  const sinopse = informacoes.find("#sinopse");
+
+  titulo.html(`<h1>${obj.nome} (${obj.ano})</h1>`);
+  diretor.html(`<span>${obj.diretor}</span>`);
+  sinopse.html(`<p>${obj.descricao}</p>`);
+}
 //Requisições!
 
 //Requisição search
@@ -32,21 +49,7 @@ $(".btn-procura").on("click", () => {
         dados.Plot
       );
 
-      $("#filmeModal").modal("show");
-
-      $("#filmeModalTitulo").html(filmeObj.nome);
-      $("#filmeModalPoster").html(`
-          <img class='img' src="${filmeObj.poster}" alt="foto">
-        `);
-
-      const informacoes = $("#filmeModal .informacoes");
-      const titulo = informacoes.find("#titulo");
-      const diretor = informacoes.find("#diretor");
-      const sinopse = informacoes.find("#sinopse");
-
-      titulo.html(`<h1>${filmeObj.nome} (${filmeObj.ano})</h1>`);
-      diretor.html(`<span>${filmeObj.diretor}</span>`);
-      sinopse.html(`<p>${filmeObj.descricao}</p>`);
+      mostraModal(filmeObj);
     },
   });
 });
@@ -150,21 +153,7 @@ $(".my-card").click(function () {
         dados.Plot
       );
 
-      $("#filmeModal").modal("show");
-
-      $("#filmeModalTitulo").html(filmeObj.nome);
-      $("#filmeModalPoster").html(`
-        <img class='img' src="${filmeObj.poster}" alt="foto">
-      `);
-
-      const informacoes = $("#filmeModal .informacoes");
-      const titulo = informacoes.find("#titulo");
-      const diretor = informacoes.find("#diretor");
-      const sinopse = informacoes.find("#sinopse");
-
-      titulo.html(`<h1>${filmeObj.nome} (${filmeObj.ano})</h1>`);
-      diretor.html(`<span>${filmeObj.diretor}</span>`);
-      sinopse.html(`<p>${filmeObj.descricao}</p>`);
+      mostraModal(filmeObj);
     },
   });
 });
@@ -176,3 +165,28 @@ $(window).scroll(() => {
   }, 300);
 });
 
+//Responsivo
+if (window.matchMedia("(min-width: 700px)").matches) {
+  $(".lista").removeClass("oculto");
+  $(".botoes").removeClass("oculto");
+  $(".lista2").addClass("oculto");
+}
+if (window.matchMedia("(max-width: 700px)").matches) {
+  //header
+  $(".lista").addClass("oculto");
+  $(".botoes").addClass("oculto");
+  $("#botao-toggler").click(() => {
+    $("#botao-toggler").submit(false);
+    $(".lista2").removeClass("oculto");
+    if ($("#botao-toggler").hasClass("collapsed")) {
+      $(".navbar").animate({ height: "250px" }, 500);
+    } else if ($("#botao-toggler").hasClass(".nav-bar-toggler")) {
+      $(".navbar").animate({ height: "250px" }, 500);
+    } else {
+      $(".navbar").animate({ height: "100px" }, 500);
+    }
+  });
+
+  //carrosel
+  $(".item-resp").removeClass("my-card");
+}

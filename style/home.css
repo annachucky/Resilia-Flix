@@ -233,7 +233,11 @@ img {
   transition: 1s;
 }
 /* Carrosel Filmes */
+/* Modal */
 
+#filme-modalPoster {
+  display: inline-block;
+}
 .filme-modal-body {
   display: flex;
   font-family: "Courier New", Courier, monospace;
@@ -278,7 +282,59 @@ img {
 #segundo-aparecer {
   animation: aparecer 2.5s;
 }
-#botaocadastro{
+#botaocadastro {
   color: rgb(255, 182, 18);
   text-decoration: none;
+}
+
+/*Responsivo*/
+@media (max-width: 700px) {
+  /* header  */
+
+  .mulher {
+    height: 100%;
+  }
+  .carousel-inner {
+    height: 200px;
+  }
+  .img {
+    width: 250px;
+  }
+  .fonte {
+    text-align: center;
+  }
+
+  .card-carousel-jquery {
+    flex-direction: column;
+  }
+  .item-resp {
+    margin-bottom: 10px;
+    text-align: center;
+    max-width: 400px;
+  }
+
+  .lista-ul {
+    flex-direction: row !important;
+    height: 50px !important;
+    margin-top: 10px;
+  }
+  #btn-procura {
+    margin-top: 10px;
+  }
+  .li-resp {
+    margin-left: 10px !important;
+  }
+  .modal-body {
+    flex-direction: column;
+  }
+  #filmeModalPoster,
+  .informacoes {
+    text-align: center;
+  }
+  .apresentacao {
+    margin: 0;
+  }
+  .sobre {
+    width: 300px;
+  }
 }
