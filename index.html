@@ -19,18 +19,19 @@
   <body>
     <header>
       <!--Navbar-->
-      <nav class="navbar navbar-expand-lg navbar-dark primary-color">
+      <nav class="navbar navbar-expand-lg navbar-dark primary-color header">
         <!-- Navbar brand -->
         <a class="navbar-brand text-warning" href="index.html">RESILIAFLIX</a>
 
         <!-- Collapse button -->
         <button
+          id="botao-toggler"
           class="navbar-toggler"
           type="button"
           data-toggle="collapse"
           data-target="#basicExampleNav"
           aria-controls="basicExampleNav"
-          aria-expanded="false"
+          aria-expanded="false" 
           aria-label="Toggle navigation"
         >
           <span class="navbar-toggler-icon"></span>
@@ -39,7 +40,7 @@
         <!-- Collapsible content -->
         <div class="collapse navbar-collapse" id="basicExampleNav">
           <form class="form-inline">
-            <div class="md-form my-0">
+            <div class="md-form my-0 search">
               <input
               id="input-procura"
                 class="form-control mr-sm-2"
@@ -51,11 +52,34 @@
                 Search
               </button>
             </div>
+            <div class="lista2 oculto">
+              <ul class="navbar-nav mr-auto lista-ul">
+                <li class="nav-item active">
+                  <a class="nav-link text-warning" href="#"
+                    >Filmes
+                    <span class="sr-only">(current)</span>
+                  </a>
+                </li>
+                <li class="nav-item li-resp">
+                  <a class="nav-link text-warning" href="#">About us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"></a>
+                </li>
+              </ul>
+              <button type="button" class="btn btn-outline-warning mr-3">
+                Login
+              </button>
+              <button type="button" class="btn btn-outline-warning" id="botaocadastro">
+                <a id="botaocadastro" href="cadastro.html">Cadastre-se</a>
+              </button>
+            </div> 
           </form>
         </div>
         <!-- Collapsible content -->
         <!-- Links -->
-        <ul class="navbar-nav mr-auto">
+       <div class="lista"> 
+        <ul class="navbar-nav mr-auto ">
           <li class="nav-item active">
             <a class="nav-link text-warning" href="#"
               >Filmes
@@ -69,12 +93,16 @@
             <a class="nav-link" href="#"></a>
           </li>
         </ul>
+      </div>
+      <div class="botoes">
         <button type="button" class="btn btn-outline-warning mr-3">
           Login
         </button>
         <button type="button" class="btn btn-outline-warning" id="botaocadastro">
           <a id="botaocadastro" href="cadastro.html">Cadastre-se</a>
         </button>
+      </div> 
+      
         <!-- Links -->
       </nav>
       <!--/.Navbar-->
@@ -89,7 +117,7 @@
       <div class="carousel-inner">
         <div class="carousel-item  active">
           <img
-            class="d-block w-100 imagem"
+            class="d-block w-100 imagem mulher"
             src="https://i.pinimg.com/originals/16/d2/95/16d2956a307f5a561de33d8c32fa83d4.jpg"
             alt="First slide"
           />
@@ -143,21 +171,24 @@
       De filmes a animes, entre nesse mundo e aproveite todo o nosso conteúdo.
     </h1>
     <!--Carrosel Filmes-->
-    <section class='pt-5 pb-5' >
+    <section class='pt-5 pb-5 lista-carrosel' >
+      
       <div class="card-carousel-jquery">
-        <div class="my-card"></div>
-        <div class="my-card"></div>
-        <div class="my-card"></div>
-        <div class="my-card"></div>
-        <div class="my-card"></div>
-        <div class="my-card"></div>
-        <div class="my-card"></div>
-        <div class="my-card"></div>
-        <div class="my-card"></div>
-        <div class="my-card"></div>
-        <div class="my-card"></div>
+        <div class="my-card item-resp"></div>
+        <div class="my-card item-resp"></div>
+        <div class="my-card item-resp"></div>
+        <div class="my-card item-resp"></div>
+        <div class="my-card item-resp"></div>
+        <div class="my-card item-resp"></div>
+        <div class="my-card item-resp"></div>
+        <div class="my-card item-resp"></div>
+        <div class="my-card item-resp"></div>
+        <div class="my-card item-resp"></div>
+        <div class="my-card item-resp"></div>
       </div>
     </section>
+    
+   
     <!--Resilia Flix-->
     <section class=" sobre apresentacao text-warning oculto">
     
