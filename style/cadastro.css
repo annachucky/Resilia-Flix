@@ -1,5 +1,6 @@
 #bodycadastro{
     color: rgb(255, 182, 18);
+    width: 100%;
 }
 #formulario{
     display: flex;
