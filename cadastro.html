@@ -1,141 +1,255 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style/cadastro.css" />
+    <link rel="stylesheet" href="./style/home.css" />
+    <title>Resilia Flix</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel='stylesheet' href='./style/cadastro.css'>
-  <link rel='stylesheet' href='./style/home.css'>
-  <title>Resilia Flix</title>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
-</head>
+  <body id="bodycadastro">
+    <header class="header">
+      <!--Navbar-->
+      <nav class="navbar navbar-expand-lg navbar-dark primary-color">
+        <!-- Navbar brand -->
+        <a class="navbar-brand text-warning" href="index.html">RESILIAFLIX</a>
 
-<body id='bodycadastro'>
-  <header>
-    <!--Navbar-->
-    <nav class="navbar navbar-expand-lg navbar-dark primary-color">
-      <!-- Navbar brand -->
-      <a class="navbar-brand text-warning" href="index.html">RESILIAFLIX</a>
+        <!-- Collapse button -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#basicExampleNav"
+          aria-controls="basicExampleNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-      <!-- Collapse button -->
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
-        aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+        <!-- Collapsible content -->
+        <div class="collapse navbar-collapse" id="basicExampleNav">
+          <form class="form-inline">
+            <div class="md-form my-0">
+              <input
+                class="form-control mr-sm-2"
+                type="text"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button type="button" class="btn btn-outline-warning">
+                Search
+              </button>
+            </div>
+          </form>
+        </div>
+        <!-- Collapsible content -->
+        <!-- Links -->
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link text-warning" href="#"
+              >Filmes
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-warning" href="#">About us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"></a>
+          </li>
+        </ul>
+        <button type="button" class="btn btn-outline-warning mr-3">
+          Login
+        </button>
+        <button
+          type="button"
+          class="btn btn-outline-warning"
+          id="botaocadastro"
+        >
+          <a id="botaocadastro" href="cadastro.html">Cadastre-se</a>
+        </button>
+        <!-- Links -->
+      </nav>
+      <!--/.Navbar-->
+    </header>
+    <main>
+      <form id="formulario">
+        <div id="container1">
+          <label for="nome">Nome Completo</label>
+          <input
+            class="form-control mr-sm-2"
+            type="text"
+            id="nome"
+            name="nome"
+            placeholder="nome"
+          />
+          <span class="error" id="errornome"
+            >Coloque um nome e sobrenome válido</span
+          >
 
-      <!-- Collapsible content -->
-      <div class="collapse navbar-collapse" id="basicExampleNav">
-        <form class="form-inline">
-          <div class="md-form my-0">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" />
-            <button type="button" class="btn btn-outline-warning">
-              Search
-            </button>
+          <label for="email">E-mail</label>
+          <input
+            type="text"
+            class="form-control mr-sm-2"
+            id="email"
+            name="email"
+            placeholder="e-mail"
+          />
+          <span class="error" id="erroremail">Coloque um e-mail válido</span>
+
+          <label for="senha">Senha </label>
+          <div class="senha">
+            <input
+              type="password"
+              class="form-control mr-sm-2"
+              id="password"
+              name="senha"
+              placeholder="senha"
+            />
+            <img
+              id="olho"
+              src="https://cdn0.iconfinder.com/data/icons/ui-icons-pack/100/ui-icon-pack-14-512.png"
+            />
           </div>
-        </form>
+
+          <label for="confsenha">Confirme a senha</label>
+          <div class="senha">
+            <input
+              type="password"
+              class="form-control mr-sm-2"
+              id="password2"
+              name="confsenha"
+              placeholder="confirme sua senha"
+            />
+            <img
+              id="olho2"
+              src="https://cdn0.iconfinder.com/data/icons/ui-icons-pack/100/ui-icon-pack-14-512.png"
+            />
+          </div>
+          <span class="error" id="errorsenha">As senhas não conferem</span>
+
+          <label for="rg">RG (apenas números)</label>
+          <input
+            type="number"
+            class="form-control mr-sm-2"
+            id="rgnumero"
+            name="rg"
+            placeholder="rg"
+          />
+          <span class="error" id="errorrg">Coloque um RG válido</span>
+        </div>
+
+        <div id="container2">
+          <label for="cep">CEP (apenas numeros)</label>
+          <input
+            type="number"
+            class="form-control mr-sm-2"
+            id="cep"
+            name="cep"
+            placeholder="cep"
+          />
+          <span class="error" id="errorcep">Coloque um CEP válido</span>
+          <span class="error" id="errorcepdados"
+            >CEP não existe na base de dados</span
+          >
+
+          <div class="citystate">
+            <label for="estado"
+              >Estado&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Cidade</label
+            >
+          </div>
+
+          <div class="citystate">
+            <input
+              type="text"
+              class="form-control mr-sm-2"
+              id="estado"
+              name="estado"
+              placeholder="estado"
+            />
+            <input
+              type="text"
+              class="form-control mr-sm-2"
+              id="cidade"
+              name="cidade"
+              placeholder="cidade"
+            />
+          </div>
+          <label for="bairro">Bairro</label>
+          <input
+            type="text"
+            class="form-control mr-sm-2"
+            id="bairro"
+            name="bairro"
+            placeholder="bairro"
+          />
+
+          <label for="rua">Rua</label>
+          <input
+            type="text"
+            class="form-control mr-sm-2"
+            id="rua"
+            name="rua"
+            placeholder="rua"
+          />
+
+          <div class="citystate">
+            <label for="numero"
+              >Número&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Complemento</label
+            >
+          </div>
+
+          <div class="citystate">
+            <input
+              type="number"
+              class="form-control mr-sm-2"
+              id="numero"
+              name="numero"
+              placeholder="numero"
+            />
+            <input
+              type="text"
+              class="form-control mr-sm-2"
+              id="complemento"
+              name="complemento"
+              placeholder="complemento"
+            />
+          </div>
+          <span class="error" id="errornumero">Coloque um número válido</span>
+        </div>
+      </form>
+      <div class="botao-div">
+        <button type="submit" id="botao" class="btn btn-outline-warning">
+          Enviar
+        </button>
       </div>
-      <!-- Collapsible content -->
-      <!-- Links -->
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link text-warning" href="#">Filmes
-            <span class="sr-only">(current)</span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-warning" href="#">About us</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#"></a>
-        </li>
-      </ul>
-      <button type="button" class="btn btn-outline-warning mr-3">
-        Login
-      </button>
-      <button type="button" class="btn btn-outline-warning" id="botaocadastro">
-        <a id="botaocadastro" href="cadastro.html">Cadastre-se</a>
-      </button>
-      <!-- Links -->
-    </nav>
-    <!--/.Navbar-->
-  </header>
-
-  <form id='formulario'>
-    <div id="container1">
-      <label for='nome'>Nome Completo</label>
-      <input class="form-control mr-sm-2"  type='text' id="nome" name='nome' placeholder="nome">
-      <span class="error" id="errornome">Coloque um nome e sobrenome válido</span>
-
-      <label for='email'>E-mail</label>
-      <input type='text' class="form-control mr-sm-2" id="email" name='email' placeholder="e-mail">
-      <span class="error" id="erroremail">Coloque um e-mail válido</span>
-
-      <label for='senha'>Senha </label>
-      <div class='senha'>
-        <input type='password' class="form-control mr-sm-2" id="password" name='senha' placeholder="senha">
-        <img id="olho" src="https://cdn0.iconfinder.com/data/icons/ui-icons-pack/100/ui-icon-pack-14-512.png" />
+    </main>
+    <footer class="w-100 footer">
+      <div
+        class="
+          text-center
+          p-3
+          text-warning
+          mt-5
+          w-100
+          border-top border-warning
+        "
+        style="background-color: rgba(0, 0, 0, 0.2)"
+      >
+        © 2021 Copyright:
+        <a class="text-white" href="index.html">ResiliaFlix</a>
       </div>
-
-      <label for='confsenha'>Confirme a senha</label>
-      <div class='senha'>
-        <input type='password' class="form-control mr-sm-2" id="password2" name='confsenha'
-          placeholder="confirme sua senha">
-        <img id="olho2" src="https://cdn0.iconfinder.com/data/icons/ui-icons-pack/100/ui-icon-pack-14-512.png" />
-      </div>
-      <span class="error" id="errorsenha">As senhas não conferem</span>
-
-      <label for='rg'>RG (apenas números)</label>
-      <input type='number' class="form-control mr-sm-2" id="rgnumero" name='rg' placeholder="rg">
-      <span class="error" id="errorrg">Coloque um RG válido</span>
-    </div>
-
-    <div id="container2">
-      <label for='cep'>CEP (apenas numeros)</label>
-      <input type='number' class="form-control mr-sm-2" id='cep' name='cep' placeholder="cep">
-      <span class="error" id='errorcep'>Coloque um CEP válido</span>
-      <span class="error" id='errorcepdados'>CEP não existe na base de dados</span>
-
-      <div class='citystate'>
-        <label for='estado'>Estado&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Cidade</label>
-      </div>
-
-      <div class='citystate'>
-        <input type='text' class="form-control mr-sm-2" id='estado' name='estado' placeholder="estado">
-        <input type='text' class="form-control mr-sm-2" id='cidade' name='cidade' placeholder="cidade">
-      </div>
-      <label for='bairro'>Bairro</label>
-      <input type='text' class="form-control mr-sm-2" id='bairro' name='bairro' placeholder="bairro">
-
-      <label for='rua'>Rua</label>
-      <input type='text' class="form-control mr-sm-2" id='rua' name='rua' placeholder="rua">
-
-      <div class='citystate'>
-        <label for='numero'>Número&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Complemento</label>
-      </div>
-
-      <div class='citystate'>
-        <input type='number' class="form-control mr-sm-2" id='numero' name='numero' placeholder="numero">
-        <input type='text' class="form-control mr-sm-2" id='complemento' name='complemento' placeholder="complemento">
-      </div>
-      <span class="error" id='errornumero'>Coloque um número válido</span>
-    </div>
-  </form>
-  <div>
-    <button type="submit" id='botao' class="btn btn-outline-warning">Enviar</button>
-  </div>
-
-  <footer class="mt-5 w-100 footer">
-    <div class=" text-center p-3 text-warning mt-5 w-100 border-top border-warning"
-      style="background-color: rgba(0, 0, 0, 0.2);">
-      © 2021 Copyright:
-      <a class="text-white" href="index.html">ResiliaFlix</a>
-    </div>
-
-  </footer>
-  <script src='./js/cadastro.js'></script>
-</body>
-
+    </footer>
+    <script src="./js/cadastro.js"></script>
+  </body>
 </html>

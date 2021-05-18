@@ -15,22 +15,25 @@
       integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
       crossorigin="anonymous"
     />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   </head>
   <body>
     <header>
       <!--Navbar-->
-      <nav class="navbar navbar-expand-lg navbar-dark primary-color">
+      <nav class="navbar navbar-expand-lg navbar-dark primary-color header">
         <!-- Navbar brand -->
         <a class="navbar-brand text-warning" href="index.html">RESILIAFLIX</a>
 
         <!-- Collapse button -->
         <button
+          id="botao-toggler"
           class="navbar-toggler"
           type="button"
           data-toggle="collapse"
           data-target="#basicExampleNav"
           aria-controls="basicExampleNav"
-          aria-expanded="false"
+          aria-expanded="false" 
           aria-label="Toggle navigation"
         >
           <span class="navbar-toggler-icon"></span>
@@ -39,22 +42,46 @@
         <!-- Collapsible content -->
         <div class="collapse navbar-collapse" id="basicExampleNav">
           <form class="form-inline">
-            <div class="md-form my-0">
+            <div class="md-form my-0 search">
               <input
+              id="input-procura"
                 class="form-control mr-sm-2"
                 type="text"
                 placeholder="Search"
                 aria-label="Search"
               />
-              <button type="button" class="btn btn-outline-warning">
+              <button id="btn-procura" type="button" class="btn btn-outline-warning btn-procura">
                 Search
               </button>
             </div>
+            <div class="lista2 oculto">
+              <ul class="navbar-nav mr-auto lista-ul">
+                <li class="nav-item active">
+                  <a class="nav-link text-warning" href="#"
+                    >Filmes
+                    <span class="sr-only">(current)</span>
+                  </a>
+                </li>
+                <li class="nav-item li-resp">
+                  <a class="nav-link text-warning" href="#">About us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"></a>
+                </li>
+              </ul>
+              <button type="button" class="btn btn-outline-warning mr-3">
+                Login
+              </button>
+              <button type="button" class="btn btn-outline-warning" id="botaocadastro">
+                <a id="botaocadastro" href="cadastro.html">Cadastre-se</a>
+              </button>
+            </div> 
           </form>
         </div>
         <!-- Collapsible content -->
         <!-- Links -->
-        <ul class="navbar-nav mr-auto">
+       <div class="lista"> 
+        <ul class="navbar-nav mr-auto ">
           <li class="nav-item active">
             <a class="nav-link text-warning" href="#"
               >Filmes
@@ -68,12 +95,16 @@
             <a class="nav-link" href="#"></a>
           </li>
         </ul>
+      </div>
+      <div class="botoes">
         <button type="button" class="btn btn-outline-warning mr-3">
           Login
         </button>
         <button type="button" class="btn btn-outline-warning" id="botaocadastro">
           <a id="botaocadastro" href="cadastro.html">Cadastre-se</a>
         </button>
+      </div> 
+      
         <!-- Links -->
       </nav>
       <!--/.Navbar-->
@@ -88,7 +119,7 @@
       <div class="carousel-inner">
         <div class="carousel-item  active">
           <img
-            class="d-block w-100 imagem"
+            class="d-block w-100 imagem mulher"
             src="https://i.pinimg.com/originals/16/d2/95/16d2956a307f5a561de33d8c32fa83d4.jpg"
             alt="First slide"
           />
@@ -142,22 +173,32 @@
       De filmes a animes, entre nesse mundo e aproveite todo o nosso conteúdo.
     </h1>
     <!--Carrosel Filmes-->
-    <section class='pt-5 pb-5' >
+    <section class='pt-5 pb-5 lista-carrosel' >
+      
       <div class="card-carousel-jquery">
-        <div class="my-card"></div>
-        <div class="my-card"></div>
-        <div class="my-card"></div>
-        <div class="my-card"></div>
-        <div class="my-card"></div>
-        <div class="my-card"></div>
-        <div class="my-card"></div>
-        <div class="my-card"></div>
-        <div class="my-card"></div>
-        <div class="my-card"></div>
-        <div class="my-card"></div>
+        <div class="my-card item-resp"></div>
+        <div class="my-card item-resp"></div>
+        <div class="my-card item-resp"></div>
+        <div class="my-card item-resp"></div>
+        <div class="my-card item-resp"></div>
+        <div class="my-card item-resp"></div>
+        <div class="my-card item-resp"></div>
+        <div class="my-card item-resp"></div>
+        <div class="my-card item-resp"></div>
+        <div class="my-card item-resp"></div>
+        <div class="my-card item-resp"></div>
       </div>
     </section>
-    <footer class="mt-5 w-100 footer">
+    
+   
+    <!--Resilia Flix-->
+    <section class=" sobre apresentacao text-warning oculto">
+    
+     <h1 id="primeiro-aparecer">O futuro...</h1>
+     <p id="segundo-aparecer">O que move o ResíliaFlix é trazer conforto e entretenimento para toda a família disponibilizando filmes e séries para todos os gostos, queremos estar presentes nos momentos de descontração e união na frente da telinha, pois te fazer feliz é o que faz a gente sorrir! Vem fazer parte! #vemProResiliaFlix</p>
+   
+    </section>
+    <footer class="w-100 footer">
       <div class=" text-center p-3 text-warning mt-5 w-100 border-top border-warning" style="background-color: rgba(0, 0, 0, 0.2);">
     © 2021 Copyright:
     <a class="text-white" href="index.html">ResiliaFlix</a>
