@@ -1,0 +1,15 @@
+#recuperasenha{
+    padding: 10px;
+}
+
+#containerRecupera{
+    border: 2px solid rgb(255, 182, 18); 
+    border-radius: 10px;
+    width: 40%;
+    margin: 1%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 2%;
+}
