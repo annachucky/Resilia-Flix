@@ -162,8 +162,8 @@ $(".my-card").click(function () {
       const diretor = informacoes.find("#diretor");
       const sinopse = informacoes.find("#sinopse");
 
-      titulo.html(`<h1>${filmeObj.nome} (${filmeObj.ano})</h1>`);
-      diretor.html(`<span>${filmeObj.diretor}</span>`);
+      titulo.html(`<center><h1>${filmeObj.nome} (${filmeObj.ano})</h1></center>`);
+      diretor.html(`<center><span>${filmeObj.diretor}</span></center>`);
       sinopse.html(`<p>${filmeObj.descricao}</p>`);
     },
   });

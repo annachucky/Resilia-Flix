@@ -24,9 +24,11 @@ html body {
 body {
   background: none !important;
 }
+
 header {
   width: 100%;
 }
+
 .footer {
   height: 122px;
   align-items: center;
@@ -43,6 +45,7 @@ header {
 .section {
   width: 60%;
 }
+
 img {
   width: 250px;
 }
@@ -256,9 +259,11 @@ img {
   padding: 1em;
   text-align: center;
 }
+
 .oculto {
   display: none;
 }
+
 /*Animação */
 @keyframes aparecer {
   0% {
