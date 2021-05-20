@@ -1,9 +1,151 @@
 <!DOCTYPE html>
 <html>
-    <body>
-        <h1>Resilia Flix</h1>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Resilia Flix</title>
+    <link rel="stylesheet" href="./style/index.css">
+    <link rel="stylesheet" href="./style/home.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <!--Navbar-->
+      <nav class="navbar navbar-expand-lg navbar-dark primary-color header">
+        <!-- Navbar brand -->
+        <a class="navbar-brand text-warning" href="./index.html">RESILIAFLIX</a>
+
+        <!-- Collapse button -->
+        <button
+          id="botao-toggler"
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#basicExampleNav"
+          aria-controls="basicExampleNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Collapsible content -->
+        <div class="collapse navbar-collapse" id="basicExampleNav">
+          <form class="form-inline">
+            <div class="lista2 oculto">
+              <ul class="navbar-nav mr-auto lista-ul">
+                <li class="nav-item li-resp">
+                  <a class="nav-link text-warning" href="contatos.html">About us</a>
+                </li>
+                <button
+            type="button"
+            class="btn btn-outline-warning ml-2"
+            id="botaocadastro"
+          >
+            <a id="botaocadastro"  href="cadastro.html">Register</a>
+          </button>
+              </ul>
+            </div>
+          </form>
+        </div>
+        <!-- Collapsible content -->
+        <!-- Links -->
+        <div class="lista">
+          <ul class="navbar-nav mr-auto">
+            
+          <button
+            type="button"
+            class="btn btn-outline-warning"
+            id="botaocadastro"
+          >
+            <a id="botaocadastro" href="cadastro.html">Register</a>
+          </button>
+        </div>
+        <!-- Links -->
+      </nav>
+      <!--/.Navbar-->
+    </header>
+   <main class="container2">
+     <div class="login">
+       <div class="titulo-h1 div-titulo">
+        <p class="titulo-h1">JÁ TEM CONTA AQUI ?</p>
+        <p class="titulo-h1">FAÇA SEU LOGIN</p>
+       </div>
+     
+     <form class="login-formulario">
+      <div class="mb-3">
         
-
-    </body>
-
+        <input placeholder="Digite aqui seu E-mail" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        
+      </div>
+      <div class="mb-3">
+        
+        <input placeholder="Digite aqui sua senha" type="password" class="form-control" id="exampleInputPassword1">
+      </div>
+     
+      <button type="submit" class="btn btn-warning botao-login font-weight-bold h3 "><a class="entrar" href="./home.html">ENTRAR</a></button>
+    </form>
+    <a class="recupera" href="./recuperasenha.html"><span class="esquece">Esqueceu a sua senha?</span></a>
+     </div>
+ <div class='informacao login'>
+    <div class="promocao">
+      <p>OS PRIMEIROS <span class="meses">3 MESES</span> SÃO GRATUITOS E DEPOIS VOCÊ SÓ PAGA</p>
+      <p class="valor">R$ 14,90</p>
+    </div>
+    <button type="submit" class="btn btn-warning botao-login font-weight-bold h3 mb-3 botao-inscreva"><a class="entrar" href="./cadastro.html">INSCREVA-SE</a></button>
+    <div class="assista"><p> ASSISTA ONDE VOCÊ QUISER,  SEJA NO TABLET, PC,  SMARTPHONE,  TV SMART E ETC...</p></div>
+ </div>
+ 
+   </main>
+    <footer class="w-100 border-top border-warning footer">
+      <div
+        class="
+          text-center
+          div-footer
+          text-warning
+          
+          w-100
+          
+        "
+      >
+        © 2021 Copyright:
+        <a class="text-white" href="index.html">ResiliaFlix</a>
+      </div>
+    </footer>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/script-home.js"></script>
+  </body>
 </html>
