@@ -1,0 +1,377 @@
+/* HTML */
+html {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ece9e6;
+    background-image: linear-gradient(
+        to top,
+        rgb(11, 12, 16) 0%,
+        rgba(23, 24, 28) 100%);
+}
+
+html body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: "Courier New", Courier, monospace;
+    overflow-x: hidden;
+    position: relative;
+    }
+
+body {
+    font-family: "Courier New", Courier, monospace;
+    background: none !important;
+}
+header {
+    width: 100%;
+}
+.footer {
+    height: 122px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar {
+    width: 100%;
+    height: 100px;
+    border-bottom: 2px solid rgb(255, 182, 18);
+}
+
+.section {
+    width: 60%;
+}
+img {
+    width: 250px;
+}
+
+.Contatos
+{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#FotoPerfil
+{
+    width: 250px;
+    height: 250px;
+    border-radius: 50px;
+    border: 2px solid yellow;
+    animation: Bordas 2s infinite alternate;
+}
+
+.Membros h3{
+    font-size: 40px;
+    margin: 10px;
+}
+
+.Titulo
+{
+    font-family: "Roboto";
+    text-align: center;
+    color: rgb(255, 182, 18);
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.15em;
+    
+    display: block;
+    padding: 15px 20px;
+    position: relative;  
+}
+
+.Titulo:after {    
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: rgb(255, 182, 18);
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+  }
+  .Titulo:hover:after { 
+    width: 50%; 
+    left: 25%; 
+  }
+
+.Membros
+{   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 90px;
+    color: rgb(255, 182, 18);
+    padding: 2%;
+    border-radius: 20px;
+}
+
+.Conteudo
+{
+    display: none;
+    padding: 25%;
+}
+
+#Vagner
+{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border-radius: 50px;
+    padding: 0;
+    border: 2px solid yellow;
+    animation: Bordas 2s infinite alternate;    
+    background-image: url("Imagens/Vagner.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#VagnerConteudo.Conteudo
+{
+    font-family: "Roboto";
+    width: 300px;
+    height: 300px;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    transition: .4s;
+    color: rgb(255, 182, 18);
+    background-color: rgba(0, 0, 0, 0.596);
+    opacity: 0;
+}
+
+#VagnerConteudo.Conteudo:hover
+{
+    opacity: 1;
+}
+
+
+#Igor
+{
+    width: 300px;
+    height: 300px;
+    border-radius: 50px;
+    padding: 0;
+    border: 2px solid yellow;
+    animation: Bordas 2s infinite alternate;    
+    background-image: url("Imagens/Igor.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+#IgorConteudo.Conteudo
+{
+    font-family: "Roboto";
+    width: 300px;
+    height: 300px;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    transition: .4s;
+    color: rgb(255, 182, 18);
+    background-color: rgba(0, 0, 0, 0.596);
+    opacity: 0;
+}
+
+#IgorConteudo.Conteudo:hover
+{
+    opacity: 1;
+}
+
+
+#Vanessa
+{
+    width: 300px;
+    height: 300px;
+    border-radius: 50px;
+    padding: 0;
+    border: 2px solid yellow;
+    animation: Bordas 2s infinite alternate;    
+    background-image: url("Imagens/Vanessa.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+#VanessaConteudo.Conteudo
+{
+    font-family: "Roboto";
+    width: 300px;
+    height: 300px;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    transition: .4s;
+    color: rgb(255, 182, 18);
+    background-color: rgba(0, 0, 0, 0.596);
+    opacity: 0;
+}
+
+#VanessaConteudo.Conteudo:hover
+{
+    opacity: 1;
+}
+
+#Anna
+{
+    width: 300px;
+    height: 300px;
+    padding: 0;
+    border-radius: 50px;
+    border: 2px solid yellow;
+    animation: Bordas 2s infinite alternate;    
+    background-image: url("Imagens/Anna.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#AnnaConteudo.Conteudo
+{
+    font-family: "Roboto";
+    width: 300px;
+    height: 300px;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    transition: .4s;
+    color: rgb(255, 182, 18);
+    background-color: rgba(0, 0, 0, 0.596);
+    opacity: 0;
+}
+
+#AnnaConteudo.Conteudo:hover
+{
+    opacity: 1;
+}
+
+#Jonatas
+{
+    width: 300px;
+    height: 300px;
+    border-radius: 50px;
+    padding: 0;
+    color: yellow;
+    border: 2px solid yellow;
+    animation: Bordas 2s infinite alternate;    
+    background-image: url("Imagens/Jonatas.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#JonatasConteudo.Conteudo
+{
+    font-family: "Roboto";
+    width: 300px;
+    height: 300px;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    transition: .4s;
+    color: rgb(255, 182, 18);
+    background-color: rgba(0, 0, 0, 0.596);
+    opacity: 0;
+}
+
+#JonatasConteudo.Conteudo:hover
+{
+    opacity: 1;
+}
+
+
+
+
+#Resilia
+{
+    width: 300px;
+    height: 300px;
+    border-radius: 50px;
+    padding: 0;
+    border: 2px solid yellow;
+    animation: Bordas 2s infinite alternate;    
+    background-image: url("Imagens/Resilia.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.Linkedin img
+{
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 16px;
+    filter: grayscale(100%);
+    transition: .4s;
+}
+
+.GitHub img
+{
+    width: 40px;
+    height: 40px;
+    border-radius: 18px;
+    background-color: white;
+    text-decoration: none;
+    color: inherit;
+    filter: grayscale(100%);
+    transition: .4s;
+}
+
+.GitHub img:hover
+{
+    filter: none;
+    cursor: pointer;
+}
+
+.Linkedin img:hover
+{
+    filter: none;
+    cursor: pointer;
+}
+
+.Links
+{ 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#IgorLinks
+{
+    display: block;
+}
+
+.oculto {
+    display: none;
+}
+
+@keyframes
+
+Bordas
+{
+    0%{border-color: rgb(240, 221, 170);}
+    50%{border-color: rgb(226, 144, 96);}
+    100%{border-color: rgb(255, 118, 7);}   
+}
+
+@keyframes Informacoes{
+    from{opacity: 0;}
+    to{
+        opacity: 1;
+        background-color: rgba(0, 0, 0, 0.596);   
+        background-size: cover;   
+    }
+}
+
