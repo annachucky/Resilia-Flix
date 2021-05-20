@@ -9,11 +9,28 @@ class Filme {
     this.descricao = descricao;
   }
 }
+//funções!
+function mostraModal(obj) {
+  $("#filmeModal").modal("show");
 
+  $("#filmeModalTitulo").html(obj.nome);
+  $("#filmeModalPoster").html(`
+        <img class='img' src="${obj.poster}" alt="foto">
+      `);
+
+  const informacoes = $("#filmeModal .informacoes");
+  const titulo = informacoes.find("#titulo");
+  const diretor = informacoes.find("#diretor");
+  const sinopse = informacoes.find("#sinopse");
+
+  titulo.html(`<h1>${obj.nome} (${obj.ano})</h1>`);
+  diretor.html(`<span>${obj.diretor}</span>`);
+  sinopse.html(`<p>${obj.descricao}</p>`);
+}
 //Requisições!
 
 //Requisição search
-$(".btn").on("click", () => {
+$(".btn-procura").on("click", () => {
   $(".form-inline").submit(false);
   const url = `http://omdbapi.com/?t=${$(
     ".form-control"
@@ -32,21 +49,7 @@ $(".btn").on("click", () => {
         dados.Plot
       );
 
-      $("#filmeModal").modal("show");
-
-      $("#filmeModalTitulo").html(filmeObj.nome);
-      $("#filmeModalPoster").html(`
-          <img class='img' src="${filmeObj.poster}" alt="foto">
-        `);
-
-      const informacoes = $("#filmeModal .informacoes");
-      const titulo = informacoes.find("#titulo");
-      const diretor = informacoes.find("#diretor");
-      const sinopse = informacoes.find("#sinopse");
-
-      titulo.html(`<h1>${filmeObj.nome} (${filmeObj.ano})</h1>`);
-      diretor.html(`<span>${filmeObj.diretor}</span>`);
-      sinopse.html(`<p>${filmeObj.descricao}</p>`);
+      mostraModal(filmeObj);
     },
   });
 });
@@ -72,9 +75,21 @@ for (let i = 0; i < filmesHome.length; i++) {
   $.ajax({
     url: `http://omdbapi.com/?i=${filmesHome[i]}&apikey=677ae39`,
     success: function (dados) {
+      let filmeObj = new Filme(
+        dados.Title,
+        dados.Year,
+        dados.Genre,
+        dados.Director,
+        dados.Poster,
+        dados.Plot
+      );
       $(myCard[i]).append(`
                   <img class='img' src="${dados.Poster}" alt="foto" data-id="${dados.imdbID}">
             `);
+      // Buscar informações do filme
+      $(myCard[i]).dblclick(() => {
+        mostraModal(filmeObj);
+      });
     },
   });
 }
@@ -134,39 +149,6 @@ $(".my-card").click(function () {
   $(this).addClass("active");
   $(this).prev().addClass("prev");
   $(this).next().addClass("next");
-
-  // Buscar informações do filme
-  const id = $(this).find("img").data("id");
-
-  $.ajax({
-    url: `http://omdbapi.com/?i=${id}&apikey=677ae39`,
-    success: function (dados) {
-      let filmeObj = new Filme(
-        dados.Title,
-        dados.Year,
-        dados.Genre,
-        dados.Director,
-        dados.Poster,
-        dados.Plot
-      );
-
-      $("#filmeModal").modal("show");
-
-      $("#filmeModalTitulo").html(filmeObj.nome);
-      $("#filmeModalPoster").html(`
-        <img class='img' src="${filmeObj.poster}" alt="foto">
-      `);
-
-      const informacoes = $("#filmeModal .informacoes");
-      const titulo = informacoes.find("#titulo");
-      const diretor = informacoes.find("#diretor");
-      const sinopse = informacoes.find("#sinopse");
-
-      titulo.html(`<center><h1>${filmeObj.nome} (${filmeObj.ano})</h1></center>`);
-      diretor.html(`<center><span>${filmeObj.diretor}</span></center>`);
-      sinopse.html(`<p>${filmeObj.descricao}</p>`);
-    },
-  });
 });
 
 //Aparição Sobre Resilia Flix
@@ -175,3 +157,29 @@ $(window).scroll(() => {
     $(".apresentacao").removeClass("oculto");
   }, 300);
 });
+
+//Responsivo
+if (window.matchMedia("(min-width: 700px)").matches) {
+  $(".lista").removeClass("oculto");
+  $(".botoes").removeClass("oculto");
+  $(".lista2").addClass("oculto");
+}
+if (window.matchMedia("(max-width: 700px)").matches) {
+  //header
+  $(".lista").addClass("oculto");
+  $(".botoes").addClass("oculto");
+  $("#botao-toggler").click(() => {
+    $("#botao-toggler").submit(false);
+    $(".lista2").removeClass("oculto");
+    if ($("#botao-toggler").hasClass("collapsed")) {
+      $(".navbar").animate({ height: "250px" }, 500);
+    } else if ($("#botao-toggler").hasClass(".nav-bar-toggler")) {
+      $(".navbar").animate({ height: "250px" }, 500);
+    } else {
+      $(".navbar").animate({ height: "100px" }, 500);
+    }
+  });
+
+  //carrosel
+  $(".item-resp").removeClass("my-card");
+}

@@ -1,4 +1,3 @@
-/* HTML */
 html {
   display: flex;
   align-items: center;
@@ -16,7 +15,7 @@ html body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  font-family: "Quicksand", sans-serif;
+  font-family: "Courier New", Courier, monospace;
   overflow-x: hidden;
   position: relative;
 }
@@ -24,13 +23,11 @@ html body {
 body {
   background: none !important;
 }
-
 header {
   width: 100%;
 }
-
 .footer {
-  height: 122px;
+  height: 100px;
   align-items: center;
   display: flex;
   justify-content: center;
@@ -45,7 +42,6 @@ header {
 .section {
   width: 60%;
 }
-
 img {
   width: 250px;
 }
@@ -57,7 +53,7 @@ img {
   height: 500px;
 }
 .fonte {
-  font-family: "Satisfy", cursive;
+  font-family: "Roboto", sans-serif;
   text-shadow: 2px 2px #000000;
 }
 /*Carrosel Banner */
@@ -237,6 +233,19 @@ img {
 }
 /* Carrosel Filmes */
 
+.sobre {
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 50px;
+}
+.sobre p {
+  font-size: 18px;
+}
+
+/* Modal */
+
+#filme-modalPoster {
+  display: inline-block;
+}
 .filme-modal-body {
   display: flex;
   font-family: "Courier New", Courier, monospace;
@@ -259,11 +268,9 @@ img {
   padding: 1em;
   text-align: center;
 }
-
 .oculto {
   display: none;
 }
-
 /*Animação */
 @keyframes aparecer {
   0% {
@@ -282,4 +289,60 @@ img {
 }
 #segundo-aparecer {
   animation: aparecer 2.5s;
+}
+#botaocadastro {
+  color: rgb(255, 182, 18);
+  text-decoration: none;
+}
+
+/*Responsivo*/
+@media (max-width: 700px) {
+  /* header  */
+
+  .mulher {
+    height: 100%;
+  }
+  .carousel-inner {
+    height: 200px;
+  }
+  .img {
+    width: 250px;
+  }
+  .fonte {
+    text-align: center;
+  }
+
+  .card-carousel-jquery {
+    flex-direction: column;
+  }
+  .item-resp {
+    margin-bottom: 10px;
+    text-align: center;
+    max-width: 400px;
+  }
+
+  .lista-ul {
+    flex-direction: row !important;
+    height: 50px !important;
+    margin-top: 10px;
+  }
+  #btn-procura {
+    margin-top: 10px;
+  }
+  .li-resp {
+    margin-left: 10px !important;
+  }
+  .modal-body {
+    flex-direction: column;
+  }
+  #filmeModalPoster,
+  .informacoes {
+    text-align: center;
+  }
+  .apresentacao {
+    margin: 0;
+  }
+  .sobre {
+    width: 300px;
+  }
 }

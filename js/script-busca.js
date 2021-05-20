@@ -20,6 +20,7 @@ $('#form-busca').on('submit', (evento) => {
   $.ajax({
     url,
     success: (resposta) => {
+
       console.log(resposta)
       let filmeObj = new Filme(
         resposta.Title,
@@ -32,11 +33,19 @@ $('#form-busca').on('submit', (evento) => {
         resposta.imdbRating,
       );
 
-      $("#filmeModal").modal("show");
-      $("#filmeModalTitulo").html(filmeObj.nome);
-      $("#filmeModalPoster").html(`
+      if (
+        resposta.Error == "Movie not found!" ||
+        resposta.Error == "Incorrect IMDb ID."
+      ) {
+        alert("Coloque um nome de filme válido!");
+        $("#procura").focus();
+      } else {
+        $("#filmeModal").modal("show");
+        $("#filmeModalTitulo").html(filmeObj.nome);
+        $("#filmeModalPoster").html(`
         <img class='img' src="${filmeObj.poster}" alt="foto">
       `);
+      }
 
       const informacoes = $("#filmeModal .informacoes");
       const titulo = informacoes.find("#titulo");
@@ -52,7 +61,7 @@ $('#form-busca').on('submit', (evento) => {
       notas.html(`<p>Notes: ${filmeObj.notas}</p>`);
     },
 
-    error: () => {
+    error: (resposta) => {
       alert('Filme/série não encontrado, tente novamente!')
     },
   })
