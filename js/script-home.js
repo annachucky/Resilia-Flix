@@ -32,7 +32,7 @@ function mostraModal(obj) {
 //Requisição search
 $(".btn-procura").on("click", () => {
   $(".form-inline").submit(false);
-  const url = `http://omdbapi.com/?t=${$(
+  const url = `https://omdbapi.com/?t=${$(
     ".form-control"
   ).val()}&apikey=677ae39`;
 
@@ -81,7 +81,7 @@ const filmesHome = [
 const myCard = document.querySelectorAll(".my-card");
 for (let i = 0; i < filmesHome.length; i++) {
   $.ajax({
-    url: `http://omdbapi.com/?i=${filmesHome[i]}&apikey=677ae39`,
+    url: `https://omdbapi.com/?i=${filmesHome[i]}&apikey=677ae39`,
     success: function (dados) {
       let filmeObj = new Filme(
         dados.Title,
