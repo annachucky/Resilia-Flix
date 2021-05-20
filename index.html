@@ -8,6 +8,7 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
     <title>Resilia Flix</title>
+    <link rel="stylesheet" href="./style/index.css">
     <link rel="stylesheet" href="./style/home.css" />
     <link
       rel="stylesheet"
@@ -15,15 +16,18 @@
       integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
       crossorigin="anonymous"
     />
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header>
       <!--Navbar-->
       <nav class="navbar navbar-expand-lg navbar-dark primary-color header">
         <!-- Navbar brand -->
-        <a class="navbar-brand text-warning" href="index.html">RESILIAFLIX</a>
+        <a class="navbar-brand text-warning" href="home.html">RESILIAFLIX</a>
 
         <!-- Collapse button -->
         <button
@@ -33,7 +37,7 @@
           data-toggle="collapse"
           data-target="#basicExampleNav"
           aria-controls="basicExampleNav"
-          aria-expanded="false" 
+          aria-expanded="false"
           aria-label="Toggle navigation"
         >
           <span class="navbar-toggler-icon"></span>
@@ -42,18 +46,6 @@
         <!-- Collapsible content -->
         <div class="collapse navbar-collapse" id="basicExampleNav">
           <form class="form-inline">
-            <div class="md-form my-0 search">
-              <input
-              id="input-procura"
-                class="form-control mr-sm-2"
-                type="text"
-                placeholder="Search"
-                aria-label="Search"
-              />
-              <button id="btn-procura" type="button" class="btn btn-outline-warning btn-procura">
-                Search
-              </button>
-            </div>
             <div class="lista2 oculto">
               <ul class="navbar-nav mr-auto lista-ul">
                 <li class="nav-item active">
@@ -69,169 +61,75 @@
                   <a class="nav-link" href="#"></a>
                 </li>
               </ul>
-              <button type="button" class="btn btn-outline-warning mr-3">
-                Login
-              </button>
-              <button type="button" class="btn btn-outline-warning" id="botaocadastro">
-                <a id="botaocadastro" href="cadastro.html">Cadastre-se</a>
-              </button>
-            </div> 
+            </div>
           </form>
         </div>
         <!-- Collapsible content -->
         <!-- Links -->
-       <div class="lista"> 
-        <ul class="navbar-nav mr-auto ">
-          <li class="nav-item active">
-            <a class="nav-link text-warning" href="#"
-              >Filmes
-              <span class="sr-only">(current)</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-warning" href="#">About us</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#"></a>
-          </li>
-        </ul>
-      </div>
-      <div class="botoes">
-        <button type="button" class="btn btn-outline-warning mr-3">
-          Login
-        </button>
-        <button type="button" class="btn btn-outline-warning" id="botaocadastro">
-          <a id="botaocadastro" href="cadastro.html">Cadastre-se</a>
-        </button>
-      </div> 
-      
+        <div class="lista">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link text-warning" href="#">About us</a>
+            </li>
+          <button
+            type="button"
+            class="btn btn-outline-warning"
+            id="botaocadastro"
+          >
+            <a id="botaocadastro" href="cadastro.html">Cadastre-se</a>
+          </button>
+        </div>
         <!-- Links -->
       </nav>
       <!--/.Navbar-->
     </header>
-
-    <!-- Carrosel Banner-->
-    <div
-      id="carouselExampleFade"
-      class="carousel slide carousel-fade border-bottom border-warning"
-      data-ride="carousel"
-    >
-      <div class="carousel-inner">
-        <div class="carousel-item  active">
-          <img
-            class="d-block w-100 imagem mulher"
-            src="https://i.pinimg.com/originals/16/d2/95/16d2956a307f5a561de33d8c32fa83d4.jpg"
-            alt="First slide"
-          />
-          <div class="carousel-caption d-none d-md-block h-50">
-            <h1 class="fonte">Lançamentos todos os dias.</h1>
-          </div>
-        </div>
-        <div class="carousel-item imagem">
-          <img
-            class="d-block w-100"
-            src="https://www.mydomaine.com/thmb/j7MrXewSHTyI8lfMpn4WKdQ4ZjA=/2121x1414/filters:fill(auto,1)/GettyImages-1066472014-7f0a7babac50423ab826eaca772d3064.jpg"
-            alt="Second slide"
-          />
-          <div class="carousel-caption d-none d-md-block h-50">
-            <h1 class="fonte preto">
-              Junte-se com a sua família para essa experiência.
-            </h1>
-          </div>
-        </div>
-        <div class="carousel-item imagem">
-          <img
-            class="d-block w-100"
-            src="https://fashionistando.uai.com.br/wp-content/uploads/sites/11/2017/12/popcorn.jpg"
-            alt="Third slide"
-          />
-          <div class="carousel-caption d-none d-md-block h-50">
-            <h1 class="fonte preto">Leve o cinema para sua casa.</h1>
-          </div>
-        </div>
+   <main class="container2">
+     <div class="login">
+       <div class="titulo-h1 div-titulo">
+        <p class="titulo-h1">JÁ TEM CONTA AQUI ?</p>
+        <p class="titulo-h1">FAÇA SEU LOGIN</p>
+       </div>
+     
+     <form class="login-formulario">
+      <div class="mb-3">
+        
+        <input placeholder="Digite aqui seu E-mail" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        
       </div>
-      <a
-        class="carousel-control-prev"
-        href="#carouselExampleFade"
-        role="button"
-        data-slide="prev"
-      >
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a
-        class="carousel-control-next"
-        href="#carouselExampleFade"
-        role="button"
-        data-slide="next"
-      >
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
+      <div class="mb-3">
+        
+        <input placeholder="Digite aqui sua senha" type="password" class="form-control" id="exampleInputPassword1">
+      </div>
+     
+      <button type="submit" class="btn btn-warning botao-login font-weight-bold h3 mt-4"><a class="entrar" href="./home.html">ENTRAR</a></button>
+    </form>
+    <a class="recupera" href="./recuperasenha.html"><span class="esquece">Esqueceu a sua senha?</span></a>
+     </div>
+ <div class='informacao login'>
+    <div class="promocao">
+      <p>OS PRIMEIROS <span class="meses">3 MESES</span> SÃO GRATUITOS E DEPOIS VOCÊ SÓ PAGA</p>
+      <p class="valor">R$ 14,90</p>
     </div>
-    <h3 class="fonte text-warning mt-3 mb-3">
-      De filmes a animes, entre nesse mundo e aproveite todo o nosso conteúdo.
-    </h1>
-    <!--Carrosel Filmes-->
-    <section class='pt-5 pb-5 lista-carrosel' >
-      
-      <div class="card-carousel-jquery">
-        <div class="my-card item-resp"></div>
-        <div class="my-card item-resp"></div>
-        <div class="my-card item-resp"></div>
-        <div class="my-card item-resp"></div>
-        <div class="my-card item-resp"></div>
-        <div class="my-card item-resp"></div>
-        <div class="my-card item-resp"></div>
-        <div class="my-card item-resp"></div>
-        <div class="my-card item-resp"></div>
-        <div class="my-card item-resp"></div>
-        <div class="my-card item-resp"></div>
+    <button type="submit" class="btn btn-warning botao-login font-weight-bold h3 mb-3 botao-inscreva"><a class="entrar" href="./cadastro.html">INSCREVA-SE</a></button>
+    <div class="assista"><p> ASSISTA ONDE VOCÊ QUISER, SEJA NO TABLET,PC,SMARTPHONE,TV SMART E ETC...</p></div>
+ </div>
+ <div class="espaço"></div>
+   </main>
+    <footer class="w-100 border-top border-warning footer">
+      <div
+        class="
+          text-center
+          div-footer
+          text-warning
+          
+          w-100
+          
+        "
+      >
+        © 2021 Copyright:
+        <a class="text-white" href="index.html">ResiliaFlix</a>
       </div>
-    </section>
-    
-   
-    <!--Resilia Flix-->
-    <section class=" sobre apresentacao text-warning oculto">
-    
-     <h1 id="primeiro-aparecer">O futuro...</h1>
-     <p id="segundo-aparecer">O que move o ResíliaFlix é trazer conforto e entretenimento para toda a família disponibilizando filmes e séries para todos os gostos, queremos estar presentes nos momentos de descontração e união na frente da telinha, pois te fazer feliz é o que faz a gente sorrir! Vem fazer parte! #vemProResiliaFlix</p>
-   
-    </section>
-    <footer class="w-100 footer">
-      <div class=" text-center p-3 text-warning mt-5 w-100 border-top border-warning" style="background-color: rgba(0, 0, 0, 0.2);">
-    © 2021 Copyright:
-    <a class="text-white" href="index.html">ResiliaFlix</a>
-  </div>
-  
     </footer>
-
-    <!--Modal de informações do filme-->
-    <div class="modal fade bd-example-modal-lg" id="filmeModal" tabindex="-1" role="dialog" aria-labelledby="filmeModalTitulo" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="filmeModalTitulo">Filme...</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body filme-modal-body">
-            <div id="filmeModalPoster"></div>
-            <div class="informacoes">
-              <div id="titulo"></div>
-              <div id="genero"></div>
-              <div id="diretor"></div>
-              <div id="sinopse"></div>
-            </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
