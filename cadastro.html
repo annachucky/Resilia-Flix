@@ -20,45 +20,27 @@
       <!-- Navbar brand -->
       <a class="navbar-brand text-warning" href="home.html">RESILIAFLIX</a>
 
-      <!-- Collapse button -->
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
-        aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
       <!-- Collapsible content -->
       <div class="collapse navbar-collapse" id="basicExampleNav">
         <form class="form-inline">
-          <div class="md-form my-0">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" />
-            <button type="button" class="btn btn-outline-warning btn-procura">
-              Search
-            </button>
-          </div>
+          <div class="md-form my-0"></div>
         </form>
       </div>
       <!-- Collapsible content -->
       <!-- Links -->
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link text-warning" href="busca.html">
-            Advanced search
-            <span class="sr-only">(current)</span>
-          </a>
-        </li>
         <li class="nav-item">
-          <a class="nav-link text-warning" href="#">
-            About us</a>
+          <a class="nav-link text-warning" href="contatos.html">About us</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#"></a>
         </li>
       </ul>
       <button type="button" class="btn btn-outline-warning mr-3">
-        Login
+        <a class="entrar" href="./index.html">Login</a>
       </button>
       <button type="button" class="btn btn-outline-warning" id="botaocadastro">
-        <a id="botaocadastro" href="cadastro.html">Register</a>
+        <a id="botaocadastro" href="cadastro.html">Cadastre-se</a>
       </button>
       <!-- Links -->
     </nav>
@@ -75,110 +57,160 @@
         <input type="text" class="form-control mr-sm-2" id="email" name="email" placeholder="e-mail" />
         <span class="error" id="erroremail">Coloque um e-mail válido</span>
 
-        <label for="senha">Senha </label>
-        <div class="senha">
-          <input type="password" class="form-control mr-sm-2" id="password" name="senha" placeholder="senha" />
-          <img id="olho" src="https://cdn0.iconfinder.com/data/icons/ui-icons-pack/100/ui-icon-pack-14-512.png" />
+        <!-- Collapsible content -->
+        <div class="collapse navbar-collapse" id="basicExampleNav">
+          <form class="form-inline">
+            <div class="md-form my-0">
+              <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" />
+              <button type="button" class="btn btn-outline-warning btn-procura">
+                Search
+              </button>
+            </div>
+          </form>
         </div>
+        <!-- Collapsible content -->
+        <!-- Links -->
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link text-warning" href="busca.html">
+              Advanced search
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-warning" href="#">
+              About us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"></a>
+          </li>
+        </ul>
+        <button type="button" class="btn btn-outline-warning mr-3">
+          Login
+        </button>
+        <button type="button" class="btn btn-outline-warning" id="botaocadastro">
+          <a id="botaocadastro" href="cadastro.html">Register</a>
+        </button>
+        <!-- Links -->
+        </nav>
+        <!--/.Navbar-->
+        </header>
+        <main>
+          <form id="formulario">
+            <div id="container1">
+              <label for="nome">Nome Completo</label>
+              <input class="form-control mr-sm-2" type="text" id="nome" name="nome" placeholder="nome" />
+              <span class="error" id="errornome">Coloque um nome e sobrenome válido</span>
 
-        <label for="confsenha">Confirme a senha</label>
-        <div class="senha">
-          <input type="password" class="form-control mr-sm-2" id="password2" name="confsenha"
-            placeholder="confirme sua senha" />
-          <img id="olho2" src="https://cdn0.iconfinder.com/data/icons/ui-icons-pack/100/ui-icon-pack-14-512.png" />
-        </div>
-        <span class="error" id="errorsenha">As senhas não conferem</span>
+              <label for="email">E-mail</label>
+              <input type="text" class="form-control mr-sm-2" id="email" name="email" placeholder="e-mail" />
+              <span class="error" id="erroremail">Coloque um e-mail válido</span>
 
-        <label for="rg">RG (apenas números)</label>
-        <input type="number" class="form-control mr-sm-2" id="rgnumero" name="rg" placeholder="rg" />
-        <span class="error" id="errorrg">Coloque um RG válido</span>
-      </div>
+              <label for="senha">Senha </label>
+              <div class="senha">
+                <input type="password" class="form-control mr-sm-2" id="password" name="senha" placeholder="senha" />
+                <img id="olho" src="https://cdn0.iconfinder.com/data/icons/ui-icons-pack/100/ui-icon-pack-14-512.png" />
+              </div>
 
-      <div id="container2">
-        <label for="cep">CEP (apenas numeros)</label>
-        <input type="number" class="form-control mr-sm-2" id="cep" name="cep" placeholder="cep" />
-        <span class="error" id="errorcep">Coloque um CEP válido</span>
-        <span class="error" id="errorcepdados">CEP não existe na base de dados</span>
+              <label for="confsenha">Confirme a senha</label>
+              <div class="senha">
+                <input type="password" class="form-control mr-sm-2" id="password2" name="confsenha"
+                  placeholder="confirme sua senha" />
+                <img id="olho2"
+                  src="https://cdn0.iconfinder.com/data/icons/ui-icons-pack/100/ui-icon-pack-14-512.png" />
+              </div>
+              <span class="error" id="errorsenha">As senhas não conferem</span>
 
-        <div class="citystate">
-          <label for="estado">Estado&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Cidade</label>
-        </div>
+              <label for="rg">RG (apenas números)</label>
+              <input type="number" class="form-control mr-sm-2" id="rgnumero" name="rg" placeholder="rg" />
+              <span class="error" id="errorrg">Coloque um RG válido</span>
+            </div>
 
-        <div class="citystate">
-          <input type="text" class="form-control mr-sm-2" id="estado" name="estado" placeholder="estado" />
-          <input type="text" class="form-control mr-sm-2" id="cidade" name="cidade" placeholder="cidade" />
-        </div>
-        <label for="bairro">Bairro</label>
-        <input type="text" class="form-control mr-sm-2" id="bairro" name="bairro" placeholder="bairro" />
+            <div id="container2">
+              <label for="cep">CEP (apenas numeros)</label>
+              <input type="number" class="form-control mr-sm-2" id="cep" name="cep" placeholder="cep" />
+              <span class="error" id="errorcep">Coloque um CEP válido</span>
+              <span class="error" id="errorcepdados">CEP não existe na base de dados</span>
 
-        <label for="rua">Rua</label>
-        <input type="text" class="form-control mr-sm-2" id="rua" name="rua" placeholder="rua" />
+              <div class="citystate">
+                <label for="estado">Estado&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Cidade</label>
+              </div>
 
-        <div class="citystate">
-          <label for="numero">Número&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Complemento</label>
-        </div>
+              <div class="citystate">
+                <input type="text" class="form-control mr-sm-2" id="estado" name="estado" placeholder="estado" />
+                <input type="text" class="form-control mr-sm-2" id="cidade" name="cidade" placeholder="cidade" />
+              </div>
+              <label for="bairro">Bairro</label>
+              <input type="text" class="form-control mr-sm-2" id="bairro" name="bairro" placeholder="bairro" />
 
-        <div class="citystate">
-          <input type="number" class="form-control mr-sm-2" id="numero" name="numero" placeholder="numero" />
-          <input type="text" class="form-control mr-sm-2" id="complemento" name="complemento"
-            placeholder="complemento" />
-        </div>
-        <span class="error" id="errornumero">Coloque um número válido</span>
-      </div>
-    </form>
-    <div class="botao-div">
-      <button type="submit" id="botao" class="btn btn-outline-warning">
-        Enviar
-      </button>
-    </div>
-  </main>
-  <footer class="w-100 border-top border-warning footer">
-    <div class=" text-center p-3 text-warning mt-3 w-100 " style="background-color: rgba(0, 0, 0, 0.2);">
-      © 2021 Copyright:
-      <a class="text-white" href="home.html">ResiliaFlix</a>
-    </div>
-    <!--Modal de informações do filme-->
-    <div class="modal fade bd-example-modal-lg" id="filmeModal" tabindex="-1" role="dialog"
-      aria-labelledby="filmeModalTitulo" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="filmeModalTitulo">Filme...</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
+              <label for="rua">Rua</label>
+              <input type="text" class="form-control mr-sm-2" id="rua" name="rua" placeholder="rua" />
+
+              <div class="citystate">
+                <label for="numero">Número&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Complemento</label>
+              </div>
+          </form>
+          <div class="botao-div">
+            <button type="submit" id="botao" class="btn btn-outline-warning">
+              <a class="entrar" href="./index.html"> Enviar </a>
             </button>
           </div>
-          <div class="modal-body filme-modal-body">
-            <div id="filmeModalPoster"></div>
-            <div class="informacoes">
-              <div id="titulo"></div>
-              <div id="genero"></div>
-              <div id="diretor"></div>
-              <div id="sinopse"></div>
+        </main>
+        <footer class="w-100 footer">
+          <div class="
+          text-center
+          p-3
+          text-warning
+          mt-5
+          w-100
+          border-top border-warning
+        " style="background-color: rgba(0, 0, 0, 0.2)">
+            © 2021 Copyright:
+            <a class="text-white" href="index.html">ResiliaFlix</a>
+          </div>
+        </footer>
+        <!--Modal de informações do filme-->
+        <div class="modal fade bd-example-modal-lg" id="filmeModal" tabindex="-1" role="dialog"
+          aria-labelledby="filmeModalTitulo" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="filmeModalTitulo">Filme...</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body filme-modal-body">
+                <div id="filmeModalPoster"></div>
+                <div class="informacoes">
+                  <div id="titulo"></div>
+                  <div id="genero"></div>
+                  <div id="diretor"></div>
+                  <div id="sinopse"></div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                  Fechar
+                </button>
+              </div>
             </div>
           </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">
-              Fechar
-            </button>
-          </div>
         </div>
-      </div>
-    </div>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
-    </script>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
-      integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous">
-    </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
-    </script>
-    <script src="./js/script-home.js"></script>
-    <script src="./js/cadastro.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+          integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+          integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+        </script>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+          integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous">
+        </script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+          integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
+        </script>
+        <script src="./js/script-home.js"></script>
+        <script src="./js/cadastro.js"></script>
 </body>
 
 </html>

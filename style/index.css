@@ -123,3 +123,58 @@ footer {
   justify-content: center;
   margin-top: 2%;
 }
+
+/*responsivo*/
+@media (min-width: 1440px) {
+  .login {
+    height: 78%;
+  }
+  .botao-inscreva {
+    height: 55px;
+  }
+  .login-formulario {
+    margin-top: 0;
+  }
+}
+@media (max-width: 700px) {
+  body {
+    height: 100%;
+  }
+  .container2 {
+    width: 100%;
+
+    flex-direction: column;
+  }
+  .login {
+    width: 76%;
+    height: 255px;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  .login-formulario {
+    height: 20%;
+  }
+  .promocao {
+    width: 100%;
+
+    font-size: 14px;
+  }
+  .valor {
+    font-size: 22px;
+  }
+  .titulo-h1 {
+    height: 30%;
+    font-size: 14px;
+    margin-top: 5px;
+    padding: 0;
+  }
+  .recupera {
+    padding: 0;
+  }
+  .esquece {
+    font-size: 12px;
+  }
+  .botao-inscreva {
+    height: 55px;
+  }
+}
