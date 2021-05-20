@@ -293,7 +293,9 @@ img {
 }
 #botaocadastro {
   color: rgb(255, 182, 18);
-  text-decoration: none;
+}
+#botaocadastro:hover {
+  color: rgb(0, 0, 0);
 }
 
 /*Responsivo*/

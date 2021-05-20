@@ -48,8 +48,16 @@ $(".btn-procura").on("click", () => {
         dados.Poster,
         dados.Plot
       );
-
-      mostraModal(filmeObj);
+      // Tratamento de erro em procura de filme
+      if (
+        dados.Error == "Movie not found!" ||
+        dados.Error == "Incorrect IMDb ID."
+      ) {
+        alert("Coloque um nome de filme válido!");
+        $("#input-procura").focus();
+      } else {
+        mostraModal(filmeObj);
+      }
     },
   });
 });
